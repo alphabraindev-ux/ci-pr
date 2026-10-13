@@ -1,0 +1,9 @@
+name: pr
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ${{ vars.CI_RUNNER }}
+    steps:
+      - run: echo "e2e job of ${{ github.repository }}"
